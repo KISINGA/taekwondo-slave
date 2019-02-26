@@ -6,15 +6,15 @@
 #include <ESP8266WiFi.h>
 
 #ifndef STASSID
-#define STASSID "your-ssid"
-#define STAPSK  "your-password"
+#define STASSID "kisinga"
+#define STAPSK  "myhardpassword"
 #endif
 
 const char* ssid     = STASSID;
 const char* password = STAPSK;
 
-const char* host = "djxmmx.net";
-const uint16_t port = 17;
+const char* host = "10.42.0.1";
+const uint16_t port = 3000;
 
 void setup() {
   Serial.begin(115200);
@@ -85,7 +85,7 @@ void loop() {
   // Close the connection
   Serial.println();
   Serial.println("closing connection");
-  client.stop();
+//  client.stop();
 
-  delay(300000); // execute once every 5 minutes, don't flood remote service
+  delay(5000); // execute once every 5 minutes, don't flood remote service
 }
